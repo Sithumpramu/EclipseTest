@@ -1,5 +1,5 @@
 
-package customer;
+package manager;
 
 import jakarta.servlet.RequestDispatcher;
 import jakarta.servlet.ServletException;
@@ -23,13 +23,13 @@ public class DeliveryDataservlet extends HttpServlet {
 		
 		boolean ss;
 		
-		ss = CustomerDButil.insertdeliverydata(Orderno, Packageno, Trackingno);
+		ss = DButil.insertdeliverydata(Orderno, Packageno, Trackingno);
 		
 		if(ss==true) {
-			RequestDispatcher dis = request.getRequestDispatcher("Deliver.jsp");
+			RequestDispatcher dis = request.getRequestDispatcher("DeliverManagement.jsp");
 			dis.forward(request, response);
 		}else {
-			RequestDispatcher dis2 = request.getRequestDispatcher("Delivernot.jsp");
+			RequestDispatcher dis2 = request.getRequestDispatcher("DeliverManagement.jsp");
 			dis2.forward(request, response);
 		}
 	}

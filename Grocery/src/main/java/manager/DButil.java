@@ -1,4 +1,4 @@
-package customer;
+package manager;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.ResultSet;
@@ -8,7 +8,11 @@ import java.util.List;
 
 
 
-public class CustomerDButil {
+public class DButil {
+	
+	private static Connection con = null;
+	private static Statement stmt = null;
+	private static ResultSet rs = null;
 
 //	public static List <Customer> Validate(String uname, String pw){
 //	
@@ -57,26 +61,22 @@ public class CustomerDButil {
 	{
 		boolean success =false;
 		
-		String url = "jdbc:mysql://localhost:3306/grocery";
-		String user = "root";
-		String password = "KMDSsql2023##";
 		
 		if(orderno.isEmpty() || packageno.isEmpty() || trackingno.isEmpty()) {
-			System.out.println("fee");
+			System.out.println("feild empty");
 			return false;
 		}
 		
 		
 		try {
 			
-			Class.forName("com.mysql.jdbc.Driver");
+			con = DBconnect.getConnection();
+			stmt = con.createStatement();
 			
-			Connection con = DriverManager.getConnection(url,user,password);
-			Statement stmt = con.createStatement();
-			String sql = "insert into userde values('"+orderno+"','"+packageno+"','"+trackingno+"')";
+			String sql = "insert into Deliverytrackinginfo values('"+orderno+"','"+packageno+"','"+trackingno+"')";
 			int rs = stmt.executeUpdate(sql);
 			
-			if(rs>0) {
+			if(rs >0) {
 				success=true;
 			}
 			else {
@@ -93,47 +93,26 @@ public class CustomerDButil {
 		return success;
 	}
 	
+	
 		
-		public static void insert(){
+		public static List<orders> getorderschedule(int OrderID){
 			
-			
-			//create database connection
-			String url = "jdbc:mysql://localhost:3306/grocery";
-			String user = "root";
-			String password = "KMDSsql2023##";
-			
-			
-		
+			ArrayList<orders> order = new ArrayList<orders>();
 			
 			try {
 				
+				con = DBconnect.getConnection();
+				stmt = con.createStatement();
 				
+				String sql = "select * from DeliveryOrders";
+				int rs = stmt.executeUpdate(sql);
 				
-				Connection con = DriverManager.getConnection(url,user,password);
-				Statement stmt = con.createStatement();
-				String sql = "select * from DeliveryDrivers";
-				ResultSet rs = stmt.executeQuery(sql);
-				
-				if(rs.next())
-				{
-					
-					String Driverid = rs.getString(1);
-					String name = rs.getString(2);
-					String outlet = rs.getString(3);
-					
-					
-					System.out.print(Driverid + name + outlet);
-					
-				}
-				
-			    }catch(Exception e) {
-				    e.printStackTrace();
-			    }
-			
-			
-		
+			}
+			catch(Exception e){
+				e.printStackTrace();
+			}
+			return order;
 		}
-		
 		
 		
 	}
