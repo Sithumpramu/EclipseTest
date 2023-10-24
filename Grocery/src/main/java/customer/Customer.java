@@ -8,13 +8,13 @@ public class Customer {
  private int modile;
  private String PW;
  
-public Customer(int username, String fNAme, String lName, String email, int modile, String pW) {
+public Customer(int username, String FNAme, String LName, String Email, int modile, String PW) {
 	this.username = username;
-	FNAme = fNAme;
-	LName = lName;
-	Email = email;
+	this.FNAme = FNAme;
+	this.LName = LName;
+	this.Email = Email;
 	this.modile = modile;
-	PW = pW;
+	this.PW = PW;
 }
 
 public int getUsername() {

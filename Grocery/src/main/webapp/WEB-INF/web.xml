@@ -26,4 +26,14 @@
     <servlet-name>DeliveryDataservlet</servlet-name>
     <url-pattern>/DeliveryDataservlet</url-pattern>
   </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>orderdetailsServlet</display-name>
+    <servlet-name>orderdetailsServlet</servlet-name>
+    <servlet-class>manager.orderdetailsServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>orderdetailsServlet</servlet-name>
+    <url-pattern>/orderdetailsServlet</url-pattern>
+  </servlet-mapping>
 </web-app>

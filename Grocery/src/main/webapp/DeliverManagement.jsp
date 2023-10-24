@@ -4,6 +4,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Delivery Management</title>
     <link rel="stylesheet" href="Resourses/css/bootstrap.css">
+    <%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
+<%@ taglib prefix="fn" uri="http://java.sun.com/jsp/jstl/functions" %>
 </head>
 <body>
   <body class="bg-primary bg-opacity-25">
@@ -37,6 +39,21 @@
           </div>
           
   </nav>
+  
+<c:forEach var="cs" items="${orderList}">
+
+
+<c:set var="oid" value="${cs.OrderID}"/>
+<c:set var="name" value="${cs.DeliveryAddress}"/>
+
+
+
+<h1>${cs.OrderID}</h1>
+<h1>${cs.DeliveryAddress}</h1>
+
+
+
+</c:forEach>
 
 
   <div class="container">
@@ -236,6 +253,7 @@
     </div>
   </section>
 </form>
+
 
   
   <!-- footer -->
