@@ -57,14 +57,14 @@ public class DButil {
 		/*take Deliveryorder details from DB*/
 		public static List<orders> getorderschedule(){
 			
-			ArrayList<orders> order = new ArrayList<orders>();
+			ArrayList<orders> orders = new ArrayList<orders>();
 			
 			try {
 				
 				con = DBconnect.getConnection();
 				stmt = con.createStatement();
 				
-				String sql = "select * from DeliveryOrderss";
+				String sql = "select * from deliveryorderss";
 				rs = stmt.executeQuery(sql);
 				
 				while(rs.next()) {
@@ -72,14 +72,14 @@ public class DButil {
 					String address = rs.getNString(3);
 					
 					orders o = new orders(id,address);
-					order.add(o);
+					orders.add(o);
 				}
 				
 			}
 			catch(Exception e){
 				e.printStackTrace();
 			}
-			return order;
+			return orders;
 		}
 		
 		

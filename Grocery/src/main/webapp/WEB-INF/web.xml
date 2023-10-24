@@ -36,4 +36,14 @@
     <servlet-name>orderdetailsServlet</servlet-name>
     <url-pattern>/orderdetailsServlet</url-pattern>
   </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>AsignDriver</display-name>
+    <servlet-name>AsignDriver</servlet-name>
+    <servlet-class>manager.AsignDriver</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>AsignDriver</servlet-name>
+    <url-pattern>/AsignDriver</url-pattern>
+  </servlet-mapping>
 </web-app>

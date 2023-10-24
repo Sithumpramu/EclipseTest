@@ -14,7 +14,7 @@ public class loginservlet extends HttpServlet {
 
 	
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		//cating the username and pw from view
+		
 		String username = request.getParameter("username");
 		String password = request.getParameter("password");
 		

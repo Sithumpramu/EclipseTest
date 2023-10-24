@@ -5,13 +5,13 @@
     <title>Delivery Management</title>
     <link rel="stylesheet" href="Resourses/css/bootstrap.css">
     <%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
-<%@ taglib prefix="fn" uri="http://java.sun.com/jsp/jstl/functions" %>
+    <%@ taglib prefix="fn" uri="http://java.sun.com/jsp/jstl/functions" %>
 </head>
 <body>
   <body class="bg-primary bg-opacity-25">
     <nav class="navbar justify-content-center bg-secondary">
           <img src="Resourses/logo.png" class="img-fluid p-2 bg-secondary" style="width: 220px;" alt="logo">
-          <a href="Ordermanagement.html" class="btn fw-bold fs-5">Order management</a>
+          <a href="OrderManagement.jsp" class="btn fw-bold fs-5">Order management</a>
   
           <div class="dropdown-center">
               <button class="btn text-muted fs-5 dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
@@ -40,18 +40,14 @@
           
   </nav>
   
-<c:forEach var="cs" items="${orderList}">
-
+<c:forEach var="cs" items="${orders}">
 
 <c:set var="oid" value="${cs.OrderID}"/>
 <c:set var="name" value="${cs.DeliveryAddress}"/>
 
 
-
 <h1>${cs.OrderID}</h1>
 <h1>${cs.DeliveryAddress}</h1>
-
-
 
 </c:forEach>
 
@@ -120,6 +116,7 @@
 
 
   <!-- cards -->
+  <form action = "#">
   <section id="drivers">
     <div class="container bg-">
       <div class="row justify-content-center my-3">
@@ -169,7 +166,7 @@
             </div>
           </div>
         </div>
-      
+    </form>  
     
        
         <div class="col-4" style="position: relative; top: 22vh;">
@@ -196,7 +193,6 @@
       </div>
     </div>
   </section>
-
 
 
   <section class="mt-5" id="Unscheduled">
@@ -271,8 +267,8 @@
         <div class="col text-center">
           <h4>Quick Links</h4>
           <ul class="list-unstyled">
-            <li><a href="Dashbord.html">Home</a></li>
-            <li><a href="Ordermanagement.html">OrderManagement</a></li>
+            <li><a href="Dashbord.jsp">Home</a></li>
+            <li><a href="OrderManagement.jsp">OrderManagement</a></li>
           </ul>
         </div>
         <div class="col text-end">

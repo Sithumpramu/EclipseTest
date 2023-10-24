@@ -15,10 +15,10 @@
               Delivery Management
             </button>
             <ul class="dropdown-menu">
-              <li><a class="dropdown-item" href="Deliverymanagment.html">Unscheduled</a></li>
-              <li><a class="dropdown-item" href="Deliverymanagment.html">Scheduled</a></li>
-              <li><a class="dropdown-item" href="Deliverymanagment.html">Drivers</a></li>
-              <li><a class="dropdown-item" href="Deliverymanagment.html">Outlet</a></li>
+              <li><a class="dropdown-item" href="DeliverManagement.jsp">Unscheduled</a></li>
+              <li><a class="dropdown-item" href="DeliverManagement.jsp">Scheduled</a></li>
+              <li><a class="dropdown-item" href="DeliverManagement.jsp">Drivers</a></li>
+              <li><a class="dropdown-item" href="DeliverManagement.jsp">Outlet</a></li>
             </ul>
           </div>
 
@@ -146,8 +146,8 @@
           <div class="col text-center">
             <h4>Quick Links</h4>
             <ul class="list-unstyled">
-              <li><a href="Dashbord.html">Home</a></li>
-              <li><a href="Deliverymanagment.html">DeliveryManagement</a></li>
+              <li><a href="Dashbord.jsp">Home</a></li>
+              <li><a href="DeliverManagment.jsp">DeliveryManagement</a></li>
             </ul>
           </div>
           <div class="col text-end">

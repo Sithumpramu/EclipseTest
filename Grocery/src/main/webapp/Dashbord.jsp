@@ -26,9 +26,9 @@
             <div class="col-2 bg-black">
               <div class="sidebar">
                 <ul class="nav flex-column">
-                  <li class="nav-item mt-4 px-3"><a class="nav-link text-white" href="Ordermanagement.html"><i class="fas fa-plus"></i>Order Management</a></li>
-                  <li class="nav-item mt-1 px-3"><a class="nav-link text-white" href="Deliverymanagment.html">Delivery Management</a></li>
-                  <li class="nav-item my-1 px-3"><a class="nav-link text-white" href="Deliverymanagment.html"><i class="fas fa-user"></i>Drivers and outlets</a></li>
+                  <li class="nav-item mt-4 px-3"><a class="nav-link text-white" href="OrderManagement.jsp"><i class="fas fa-plus"></i>Order Management</a></li>
+                  <li class="nav-item mt-1 px-3"><a class="nav-link text-white" href="DeliverManagement.jsp">Delivery Management</a></li>
+                  <li class="nav-item my-1 px-3"><a class="nav-link text-white" href="DeliverManagement.jsp"><i class="fas fa-user"></i>Drivers and outlets</a></li>
                   <li class="nav-item my-1 px-3" ><a class="nav-link text-white" href="#"><i class="fas fa-tachometer-alt"></i>Profile</a></li>
                   <li class="nav-item my-1 px-3"><a class="nav-link text-white" href="#" data-bs-toggle="modal" data-bs-target="#modal">Notifictions</a></li>
                 </ul>
@@ -127,8 +127,8 @@
             <div class="col text-center">
               <h4>Quick Links</h4>
               <ul class="list-unstyled">
-                <li><a href="Ordermanagement.html">OrderManagement</a></li>
-                <li><a href="Deliverymanagment.html">DeliveryManagement</a></li>
+                <li><a href="OrderManagement.jsp">OrderManagement</a></li>
+                <li><a href="DeliverManagment.jsp">DeliveryManagement</a></li>
               </ul>
             </div>
             <div class="col text-end">

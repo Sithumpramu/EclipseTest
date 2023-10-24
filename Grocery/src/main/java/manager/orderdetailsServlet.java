@@ -13,23 +13,20 @@ import java.util.List;
 	private static final long serialVersionUID = 1L;
 
 	
-	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		
-    List<orders> orderList = DButil.getorderschedule();
-        
-        if (orderList != null) {
-            request.setAttribute("orderList", orderList);
-            RequestDispatcher dis = request.getRequestDispatcher("yes.jsp");
-            dis.forward(request, response);
-        } else {
-            // Handle the case where no data is retrieved or an error occurred
-            RequestDispatcher dis2 = request.getRequestDispatcher("ErrorPage.jsp");
-            dis2.forward(request, response);
-        }
-        
-        
-        
-        
+		try {
+		List<orders> orders = DButil.getorderschedule();
+		
+		request.setAttribute("orders", orders);
+		}
+		catch(Exception e){
+			e.getStackTrace();
+		}
+		
+		RequestDispatcher dispatcher = request.getRequestDispatcher("DeliverManagement.jsp");
+		dispatcher.forward(request, response);
+ 
 		}
 	}
 
