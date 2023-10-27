@@ -46,4 +46,24 @@
     <servlet-name>AsignDriver</servlet-name>
     <url-pattern>/AsignDriver</url-pattern>
   </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>Loginservlet</display-name>
+    <servlet-name>Loginservlet</servlet-name>
+    <servlet-class>Users.Loginservlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>Loginservlet</servlet-name>
+    <url-pattern>/Loginservlet</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>DeliveryScheduleservlet</display-name>
+    <servlet-name>DeliveryScheduleservlet</servlet-name>
+    <servlet-class>manager.DeliveryScheduleservlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>DeliveryScheduleservlet</servlet-name>
+    <url-pattern>/DeliveryScheduleservlet</url-pattern>
+  </servlet-mapping>
 </web-app>

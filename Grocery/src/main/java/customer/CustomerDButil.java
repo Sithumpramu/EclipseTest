@@ -10,12 +10,13 @@ import java.util.List;
 
 public class CustomerDButil {
 
-	public static List <Customer> Validate(String uname, String pw){
+	public static Customer Validate(String uname, String pw){
 		
-		ArrayList<Customer> cus = new ArrayList<Customer>();
+
+		Customer c = new Customer();
 		
 		//create database connection
-		String url = "jdbc:mysql://localhost:3306/grocery";
+		String url = "jdbc:mysql://localhost:3306/new_schemagrocery";
 		String user = "root";
 		String password = "KMDSsql2023##";
 		
@@ -40,15 +41,20 @@ public class CustomerDButil {
 				int mobile = rs.getInt(5);
 				String pwd = rs.getString(6);
 				
-				Customer c =new Customer(id,fname,lname,email,mobile,pwd);
-				cus.add(c);
+				//Customer c =new Customer(id,fname,lname,email,mobile,pwd);//
+				c.setUsername(rs.getInt(1));
+				c.setFNAme(rs.getString(2));
+				c.setLName(rs.getString(3));
+				c.setEmail(rs.getString(4));
+				c.setModile(rs.getInt(5));
+				c.setPW(rs.getString(6));
+				
 			}
 			
 		    }catch(Exception e) {
 			    e.printStackTrace();
 		    }
 		
-		
-		return cus;
+		return c;
 	}
 }

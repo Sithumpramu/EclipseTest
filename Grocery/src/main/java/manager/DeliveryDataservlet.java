@@ -7,6 +7,8 @@ import jakarta.servlet.annotation.WebServlet;
 import jakarta.servlet.http.HttpServlet;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
+import jakarta.servlet.http.HttpSession;
+
 import java.io.IOException;
 
 
@@ -25,11 +27,14 @@ public class DeliveryDataservlet extends HttpServlet {
 		
 		ss = DButil.insertdeliverydata(Orderno, Packageno, Trackingno);
 		
+		System.out.println(Orderno);
+		System.out.println(Packageno);
+		
 		if(ss==true) {
-			RequestDispatcher dis = request.getRequestDispatcher("DeliverManagement.jsp");
+			RequestDispatcher dis = request.getRequestDispatcher("yes.jsp");
 			dis.forward(request, response);
 		}else {
-			RequestDispatcher dis2 = request.getRequestDispatcher("DeliverManagement.jsp");
+			RequestDispatcher dis2 = request.getRequestDispatcher("no.jsp");
 			dis2.forward(request, response);
 		}
 	}

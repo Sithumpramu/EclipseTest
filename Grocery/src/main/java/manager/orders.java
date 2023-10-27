@@ -11,15 +11,33 @@ public class orders {
 			this.DeliveryAddress = DeliveryAddress;
 			
 		}
+		
+		
+
+		public orders() {
+		
+			
+		}
+		
+	
 
 		public int getOrderID() {
 			return OrderID;
 		}
 		
-		public String DeliveryAddress() {
+		public String getDeliveryAddress() {
 			return DeliveryAddress;
 		}
 
+		public void setDeliveryAddress(String deliveryAddress) {
+			DeliveryAddress = deliveryAddress;
+		}
+
+		public void setOrderID(int orderID) {
+			OrderID = orderID;
+		}
+
+	
 
 
 	

@@ -17,6 +17,36 @@ public Customer(int username, String FNAme, String LName, String Email, int modi
 	this.PW = PW;
 }
 
+public Customer() {
+
+}
+
+
+
+public void setUsername(int username) {
+	this.username = username;
+}
+
+public void setFNAme(String fNAme) {
+	FNAme = fNAme;
+}
+
+public void setLName(String lName) {
+	LName = lName;
+}
+
+public void setEmail(String email) {
+	Email = email;
+}
+
+public void setModile(int modile) {
+	this.modile = modile;
+}
+
+public void setPW(String pW) {
+	PW = pW;
+}
+
 public int getUsername() {
 	return username;
 }

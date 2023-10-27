@@ -6,6 +6,8 @@ import jakarta.servlet.annotation.WebServlet;
 import jakarta.servlet.http.HttpServlet;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
+import jakarta.servlet.http.HttpSession;
+
 import java.io.IOException;
 import java.util.List;
 
@@ -13,12 +15,18 @@ import java.util.List;
 	private static final long serialVersionUID = 1L;
 
 	
-	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		
+		HttpSession ss = request.getSession();
 		try {
-		List<orders> orders = DButil.getorderschedule();
+		orders order = DButil.getorderschedule();
 		
-		request.setAttribute("orders", orders);
+		ss.setAttribute("order", order);
+		
+		DeliverySchedule sche= DButil.getDeliverySchedule();
+		
+		ss.setAttribute("sche",sche);
+		
 		}
 		catch(Exception e){
 			e.getStackTrace();

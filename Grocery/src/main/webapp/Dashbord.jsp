@@ -1,3 +1,8 @@
+    
+<%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
+<%@ taglib prefix="fn" uri="http://java.sun.com/jsp/jstl/functions" %>
+<%@page import = "customer.Customer" %>
+
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -6,6 +11,7 @@
     <link rel="stylesheet" href="Resourses/css/bootstrap.css">
 </head>
 <body>
+
     <div class="container-fluid">
         <div class="row bg-secondary py-3 align-items-center">
             <div class="col">
@@ -15,32 +21,76 @@
             <div class="col">
                 <div class="d-flex justify-content-end">
                     <input type="text" class="form-control me-2 w-50" placeholder="Search...">
-                    <buytton class="btn btn-primary">Logout</buytton>
+                    <button class="btn btn-primary">Logout</button>
                   </div>
             </div>
         </div>
     
 
+
+
+     
       <div class="main-content" >
         <div class="row bg-primary bg-opacity-50 h-100 ">
             <div class="col-2 bg-black">
               <div class="sidebar">
-                <ul class="nav flex-column">
-                  <li class="nav-item mt-4 px-3"><a class="nav-link text-white" href="OrderManagement.jsp"><i class="fas fa-plus"></i>Order Management</a></li>
-                  <li class="nav-item mt-1 px-3"><a class="nav-link text-white" href="DeliverManagement.jsp">Delivery Management</a></li>
-                  <li class="nav-item my-1 px-3"><a class="nav-link text-white" href="DeliverManagement.jsp"><i class="fas fa-user"></i>Drivers and outlets</a></li>
-                  <li class="nav-item my-1 px-3" ><a class="nav-link text-white" href="#"><i class="fas fa-tachometer-alt"></i>Profile</a></li>
-                  <li class="nav-item my-1 px-3"><a class="nav-link text-white" href="#" data-bs-toggle="modal" data-bs-target="#modal">Notifictions</a></li>
-                </ul>
+              
+              
+              
+              <div class="nav flex-column">
+              
+                  <button class="btn btn-primary mt-4 px-3">
+                      <a class="nav-link text-white" href="OrderManagement.jsp">
+                          <i class="fas fa-plus"></i>Order Management
+                      </a>
+                  </button>
+               </form>
+              
+                  <button class="btn btn-primary mt-1 px-3">
+                      <a class="nav-link text-white" href="DeliverManagement.jsp">
+                          Delivery Management
+                      </a>
+                  </button>
+              
+                  <button class="btn btn-primary my-1 px-3">
+                      <a class="nav-link text-white" href="DeliverManagement.jsp"">
+                          <i class="fas fa-user"></i>Drivers and outlets
+                      </a>
+                  </button>
+              
+                  <button class="btn btn-primary my-1 px-3">
+                      <a class="nav-link text-white" href="#">
+                          <i class="fas fa-tachometer-alt"></i>Profile
+                      </a>
+                  </button>
+              
+                  <button class="btn btn-primary my-1 px-3" data-bs-toggle="modal" data-bs-target="#modal">
+                      <a class="nav-link text-white">
+                          Notifications
+                      </a>
+                  </button>
+                  
+              </div>
+             
+              
+             
               </div>
             </div>
+            
+     
+             
+
     
             <div class="col" style="position: relative; left: 100px;">
-                <h1 class="display-6 my-4" >Hello! <span class="fs-4 ms-4"></span></h1>
+                <h1 class="display-6 my-4" >Hello! <span class="fs-4 ms-4">${cusdetails.getUsername()}</span></h1>
                 <h1 class="h3 my-5" >Overveiw</h1>
             </div>
+            
+                   </div>
         </div>
+ 
         
+       
         <div class="container w-75" style="position: absolute; top: 250px; left: 300px;">
             <div class="row">
                 <div class="col">
@@ -110,8 +160,6 @@
       </div>
 
 
-
-
        <!-- footer -->
        <footer class="bg-black text-white">
         <div class="container">
@@ -154,7 +202,7 @@
    
          
     
-   
+
 
     <script src="Resourses/js/bootstrap.bundle.js"></script>
 </body>

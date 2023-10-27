@@ -6,6 +6,8 @@
     <link rel="stylesheet" href="Resourses/css/bootstrap.css">
     <%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
     <%@ taglib prefix="fn" uri="http://java.sun.com/jsp/jstl/functions" %>
+    <%@page import = "manager.orders" %>
+    
 </head>
 <body>
   <body class="bg-primary bg-opacity-25">
@@ -40,16 +42,7 @@
           
   </nav>
   
-<c:forEach var="cs" items="${orders}">
 
-<c:set var="oid" value="${cs.OrderID}"/>
-<c:set var="name" value="${cs.DeliveryAddress}"/>
-
-
-<h1>${cs.OrderID}</h1>
-<h1>${cs.DeliveryAddress}</h1>
-
-</c:forEach>
 
 
   <div class="container">
@@ -61,7 +54,7 @@
           <p class="col border fw-bold ">Destination</p>
         </div>
         <div class="content">
-          <p class="d-flex justify-content-around">D000022587 <span>Kalutara</span></p>
+          <p class="d-flex justify-content-around">${order.getOrderID()}<span>${order.getDeliveryAddress()}</span></p>
           <p class="d-flex justify-content-around">D000022587 <span>Kalutara</span></p>
           <p class="d-flex justify-content-around">D000022587 <span>Kalutara</span></p>
           <p class="d-flex justify-content-around">D000022587 <span>Kalutara</span></p>
@@ -77,15 +70,15 @@
         <div class="content d-flex mt-4">
           <p class="col border fw-bold ">Destination</p>
           <p class="col border fw-bold ">Driver</p>
-          <p class="col border fw-bold ">OrderNo</p>
+          <p class="col border fw-bold ">DeliverNo</p>
           <p class="col border fw-bold ">Delivery Date</p>
           <p class="col border fw-bold ">Delete</p>
         </div>
         <div class="content d-flex">
-          <p class="col">Kalutara</p>
-          <p class="col">K Perera</p>
-          <p class="col">D000025478</p>
-          <p class="col">2023/10/12</p>
+          <p class="col">${sche.getDestination()}</p>
+          <p class="col">${sche.getDriver()}</p>
+          <p class="col">${sche.getDeliveryNo()}</p>
+          <p class="col">${sche.getDeliveryDate()}</p>
           <button class="btn btn-warning me-4" style="width: 110px; height: 25px; font-size: 11px;" data-bs-toggle="modal" data-bs-target="#modal">DELETE</button>
         </div>
         <div class="content d-flex">
@@ -241,7 +234,7 @@
     <div class="container border rounded-3 border-2 my-5 text-center">
       <h5 class="display-6">Tracking Info</h5>
       <div class="row d-flex flex-column">
-        <div><input name="orderno" type="text" placeholder="OrderNO" class="w-50 mt-3" id="orderno"></div>
+        <div><input name="orderno" type="text" placeholder="DeliveryNO" class="w-50 mt-3" id="orderno"></div>
         <div><input name="packageno" type="text" placeholder="PackageNO" class="w-50 mt-3" id="packageno"></div>
         <div><input name="trackingno" type="text" placeholder="TrackingNO" class="w-50 mt-3" id="trackingno"></div>
       </div>
