@@ -89,9 +89,9 @@ public class DButil {
 		
 		
 /*----------------take DeliverySchedule details from DB--------------------------*/		
-            public static DeliverySchedule getDeliverySchedule(){
+            public static List <DeliverySchedule> getDeliverySchedule(){
 			
-			DeliverySchedule sche = new DeliverySchedule();
+			 ArrayList <DeliverySchedule> sche = new ArrayList<>();
 			
 			try {
 				
@@ -107,10 +107,9 @@ public class DButil {
 					Date DeliverDate = rs.getDate(3);
 					String Driver = rs.getNString(4);
 					
-					sche.setDeliveryNo(rs.getNString(1));
-					sche.setDestination(rs.getNString(2));
-					sche.setDeliveryDate(rs.getDate(3));
-					sche.setDriver(rs.getNString(4));
+					DeliverySchedule s = new DeliverySchedule(DeliNo,Destination,DeliverDate,Driver);
+					
+					sche.add(s);
 					
 				}
 				
@@ -120,7 +119,42 @@ public class DButil {
 			}
 			return sche;
 		}
+            
 		
-		
+/*----------------Delete DeliverySchedule details from DB--------------------------*/
+            
+            public static boolean Deletescheduleitems(String primaryvaluetodelete){
+    			
+            	boolean success =false;
+    			
+    			try {
+    				
+    				con = DBconnect.getConnection();
+    				stmt = con.createStatement();
+    				
+    				String sql = "delete from deliveryschedule where DeliveryNo = '"+primaryvaluetodelete+"'";
+    				int rs = stmt.executeUpdate(sql);
+    				
+    				
+    				if(rs>0) {
+    					success = true;
+    				}
+    				else {
+    					success = false;
+    				}
+    					
+    				
+    				
+    			}
+    			catch(Exception e){
+    				e.printStackTrace();
+    			
+    			}
+				return success;
+    			
+    		}
+            
+            
+            
 	}
 

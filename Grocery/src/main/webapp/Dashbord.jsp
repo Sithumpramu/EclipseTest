@@ -118,7 +118,7 @@
                     <div class=" p-2 m-5 border border-3 border-dark" style="height: 200px;">
                         <h5 class="p-2">Orders</h5>
                         <p class="my-2 p-2 fs-5 mx-5 fs-6">
-                            <span class="mx-5">20</span>
+                            <span class="mx-5">${order.getOrderID()}</span>
                             <span class="mx-5">2023/10/05</span>
                             <span class="mx-5">Delivery</span>
                         </p>
@@ -128,14 +128,14 @@
                             <span class="mx-5">2023/10/05</span>
                             <span class="mx-5">Delivery</span>
                         </p>
-                        <a href="Ordermanagement.html" class="text-black" style="position: relative; left: 35vw;">More>></a>
+                        <a href="OrderManagement.jsp" class="text-black" style="position: relative; left: 35vw;">More>></a>
                     </div>
                 </div>
                 <div class="col">
                     <div class=" p-2 m-5 border border-3 border-dark"  style="height: 200px;">
                         <h5 class="p-2">Notifications</h5>
-                        <p class="my-2 p-2 text-center fs-6">Lorem ipsum dolor sit.</p>
-                        <p class="my-2 p-2 text-center fs-6">Lorem ipsum dolor sit.</p>
+                        <p class="my-2 p-2 text-center fs-6">.</p>
+                        <p class="my-2 p-2 text-center fs-6">No new Notifications</p>
                         <a href="#" class="text-black" style="position: relative; left: 170px;"  data-bs-toggle="modal" data-bs-target="#modal">More>></a>
                     </div>
                

@@ -10,6 +10,9 @@
     
 </head>
 <body>
+  
+   
+    
   <body class="bg-primary bg-opacity-25">
     <nav class="navbar justify-content-center bg-secondary">
           <img src="Resourses/logo.png" class="img-fluid p-2 bg-secondary" style="width: 220px;" alt="logo">
@@ -65,7 +68,10 @@
           <p></p>
         </div>
       </div>
+    
+  
       <div class="col-8">
+       
         <h1 class="h5 text-primary mt-2">Ongoing Deliveriy Schedule</h1>
         <div class="content d-flex mt-4">
           <p class="col border fw-bold ">Destination</p>
@@ -74,13 +80,20 @@
           <p class="col border fw-bold ">Delivery Date</p>
           <p class="col border fw-bold ">Delete</p>
         </div>
+        
         <div class="content d-flex">
-          <p class="col">${sche.getDestination()}</p>
-          <p class="col">${sche.getDriver()}</p>
-          <p class="col">${sche.getDeliveryNo()}</p>
-          <p class="col">${sche.getDeliveryDate()}</p>
-          <button class="btn btn-warning me-4" style="width: 110px; height: 25px; font-size: 11px;" data-bs-toggle="modal" data-bs-target="#modal">DELETE</button>
+        <c:forEach var = "schedules" items = "${sche}"> 
+          <p class="col">${schedules.getDestination()}</p>
+          <p class="col">${schedules.getDriver()}</p>
+          <p class="col">${schedules.getDeliveryNo()}</p>
+          <p class="col">${schedules.getDeliveryDate()}</p>
+          <form action="DeleteSchedule" method="post">
+          <input type="hidden" name="DeliveryNo" value="${schedules.getDeliveryNo()}">
+          <button class="btn btn-warning me-4 col" style="width: 110px; height: 25px; font-size: 11px;" data-bs-toggle="modal" data-bs-target="#modal">DELETE</button>
+          </form>
+         </c:forEach>
         </div>
+       
         <div class="content d-flex">
           <p class="col">Kalutara</p>
           <p class="col">K Perera</p>
@@ -104,9 +117,9 @@
         </div>
         
       </div>
+      
     </div>
-  </div>
-
+  
 
   <!-- cards -->
   <form action = "#">
@@ -200,27 +213,27 @@
             <p class="col border fw-bold ">Date and time</p>
           </div>
           <div class="content d-flex align-items-center mb-4">
-            <p class="col-2">O544444</p>
-            <p class="col-2">Lorem, ipsum dolor.</p>
-            <p class="col">Lorem ipsum, dolor sit amet consectetur adipisicing.</p>
+            <p class="col-2">4</p>
+            <p class="col-2">Kusal Perera.</p>
+            <p class="col">2023-10-10</p>
             <input name="date1" class="col" type="datetime" placeholder="Date & Time" id="dat1">
           </div>
           <div class="content d-flex align-items-center mb-4">
-            <p class="col-2">O544444</p>
-            <p class="col-2">Lorem, ipsum dolor.</p>
-            <p class="col">Lorem ipsum, dolor sit amet consectetur adipisicing.</p>
+            <p class="col-2">5</p>
+            <p class="col-2">Adithya Perera</p>
+            <p class="col">2023-10-11</p>
             <input name="date2" class="col" type="datetime"  placeholder="Date & Time" id="dat2">
           </div>
           <div class="content d-flex align-items-center mb-4">
-            <p class="col-2">O544444</p>
-            <p class="col-2">Lorem, ipsum dolor.</p>
-            <p class="col">Lorem ipsum, dolor sit amet consectetur adipisicing.</p>
+            <p class="col-2">7</p>
+            <p class="col-2">Kusal Perera.</p>
+            <p class="col">2023-10-12</p>
             <input name="date3" class="col" type="datetime"  placeholder="Date & Time" id="dat3">
           </div>
           <div class="content d-flex align-items-center mb-4">
-            <p class="col-2">O544444</p>
-            <p class="col-2">Lorem, ipsum dolor.</p>
-            <p class="col">Lorem ipsum, dolor sit amet consectetur adipisicing.</p>
+            <p class="col-2">8</p>
+            <p class="col-2">Saman Perera.</p>
+            <p class="col">2023-10-10</p>
             <input name="date4" class="col" type="datetime"  placeholder="Date & Time" id="dat4">
           </div>
           <button class="btn btn-primary my-3 " data-bs-toggle="modal" data-bs-target="#schedulingmodal">Schedule</button>

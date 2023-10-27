@@ -1,4 +1,3 @@
-
 package manager;
 
 import jakarta.servlet.RequestDispatcher;
@@ -7,31 +6,22 @@ import jakarta.servlet.annotation.WebServlet;
 import jakarta.servlet.http.HttpServlet;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
-import jakarta.servlet.http.HttpSession;
-
 import java.io.IOException;
 
-
-public class DeliveryDataservlet extends HttpServlet {
+public class DeleteScheduleServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 
 	
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		
-	    String  Orderno = request.getParameter("orderno");
-		String Packageno = request.getParameter("packageno");
-		String Trackingno = request.getParameter("trackingno");
+		String primaryvaluetodelete = request.getParameter("DeliveryNo");
 		
+		boolean s;
 		
-		boolean ss;
+		s = DButil.Deletescheduleitems(primaryvaluetodelete);
 		
-		ss = DButil.insertdeliverydata(Orderno, Packageno, Trackingno);
-		
-		System.out.println(Orderno);
-		System.out.println(Packageno);
-		
-		if(ss==true) {
-			RequestDispatcher dis = request.getRequestDispatcher("DeliverManagement.jsp");
+		if(s==true) {
+			RequestDispatcher dis = request.getRequestDispatcher("Dashbord.jsp");
 			dis.forward(request, response);
 		}else {
 			RequestDispatcher dis2 = request.getRequestDispatcher("DeliverManagement.jsp");
@@ -40,6 +30,3 @@ public class DeliveryDataservlet extends HttpServlet {
 	}
 
 }
-
-
-

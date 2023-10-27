@@ -31,9 +31,8 @@ public class loginservlet extends HttpServlet {
 			
 			sessi.setAttribute("order", order);
 			
-			DeliverySchedule sche= DButil.getDeliverySchedule();
-			
-			sessi.setAttribute("sche",sche);
+			List <DeliverySchedule> sche = DButil.getDeliverySchedule();
+			sessi.setAttribute("sche", sche);
 		}
 		catch(Exception e) {
 			e.printStackTrace();

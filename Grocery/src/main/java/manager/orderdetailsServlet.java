@@ -23,9 +23,8 @@ import java.util.List;
 		
 		ss.setAttribute("order", order);
 		
-		DeliverySchedule sche= DButil.getDeliverySchedule();
-		
-		ss.setAttribute("sche",sche);
+		List <DeliverySchedule> sche = DButil.getDeliverySchedule();
+		ss.setAttribute("sche", sche);
 		
 		}
 		catch(Exception e){

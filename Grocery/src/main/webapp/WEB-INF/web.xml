@@ -8,6 +8,7 @@
     <servlet-name>login</servlet-name>
     <url-pattern>/login</url-pattern>
   </servlet-mapping>
+  
   <servlet>
     <servlet-name>DeliveryData</servlet-name>
     <servlet-class>manager.DeliveryDataservlet</servlet-class>
@@ -16,16 +17,8 @@
     <servlet-name>DeliveryData</servlet-name>
     <url-pattern>/DeliveryData</url-pattern>
   </servlet-mapping>
-  <servlet>
-    <description></description>
-    <display-name>DeliveryDataservlet</display-name>
-    <servlet-name>DeliveryDataservlet</servlet-name>
-    <servlet-class>manager.DeliveryDataservlet</servlet-class>
-  </servlet>
-  <servlet-mapping>
-    <servlet-name>DeliveryDataservlet</servlet-name>
-    <url-pattern>/DeliveryDataservlet</url-pattern>
-  </servlet-mapping>
+  
+  
   <servlet>
     <description></description>
     <display-name>orderdetailsServlet</display-name>
@@ -36,6 +29,7 @@
     <servlet-name>orderdetailsServlet</servlet-name>
     <url-pattern>/orderdetailsServlet</url-pattern>
   </servlet-mapping>
+  
   <servlet>
     <description></description>
     <display-name>AsignDriver</display-name>
@@ -46,24 +40,27 @@
     <servlet-name>AsignDriver</servlet-name>
     <url-pattern>/AsignDriver</url-pattern>
   </servlet-mapping>
+  
+
   <servlet>
     <description></description>
-    <display-name>Loginservlet</display-name>
-    <servlet-name>Loginservlet</servlet-name>
-    <servlet-class>Users.Loginservlet</servlet-class>
-  </servlet>
-  <servlet-mapping>
-    <servlet-name>Loginservlet</servlet-name>
-    <url-pattern>/Loginservlet</url-pattern>
-  </servlet-mapping>
-  <servlet>
-    <description></description>
-    <display-name>DeliveryScheduleservlet</display-name>
-    <servlet-name>DeliveryScheduleservlet</servlet-name>
+    <display-name>DeliverySchedule</display-name>
+    <servlet-name>DeliverySchedule</servlet-name>
     <servlet-class>manager.DeliveryScheduleservlet</servlet-class>
   </servlet>
   <servlet-mapping>
-    <servlet-name>DeliveryScheduleservlet</servlet-name>
-    <url-pattern>/DeliveryScheduleservlet</url-pattern>
+    <servlet-name>DeliverySchedule</servlet-name>
+    <url-pattern>/DeliverySchedule</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+    <description></description>
+    <display-name>DeleteSchedule</display-name>
+    <servlet-name>DeleteSchedule</servlet-name>
+    <servlet-class>manager.DeleteScheduleServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>DeleteSchedule</servlet-name>
+    <url-pattern>/DeleteSchedule</url-pattern>
   </servlet-mapping>
 </web-app>
