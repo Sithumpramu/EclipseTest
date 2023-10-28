@@ -79,6 +79,7 @@
           <p class="col border fw-bold ">DeliverNo</p>
           <p class="col border fw-bold ">Delivery Date</p>
           <p class="col border fw-bold ">Delete</p>
+          <p class="col border fw-bold ">Edit</p>
         </div>
         
         <div class="content d-flex">
@@ -91,7 +92,16 @@
           <input type="hidden" name="DeliveryNo" value="${schedules.getDeliveryNo()}">
           <button class="btn btn-warning me-4 col" style="width: 110px; height: 25px; font-size: 11px;" data-bs-toggle="modal" data-bs-target="#modal">DELETE</button>
           </form>
-         </c:forEach>
+           
+          <button class="btn btn-primary me-4" style="width: 110px; height: 25px; font-size: 11px;" data-bs-toggle="modal" data-bs-target="#modaledit" onclick="toogleinput()">Edit</button>
+          
+          <form action="UpdateSchedule" method="post" style="position:absolute; top:55vh; right:27vw;">
+          <input type="date" class="w-25 mt-3 d-none w-75" id = "toggle" placeholder="New Delivery Date" name="Datee">
+          <input type="hidden" name="DeliveryNo" value="${schedules.getDeliveryNo()}">
+          <button class="btn btn-secondary d-none" id ="button" style="font-size:11px">SET</button>
+          </form>
+          
+          </c:forEach>
         </div>
        
         <div class="content d-flex">
@@ -100,6 +110,7 @@
           <p class="col">D000025478</p>
           <p class="col">2023/10/12</p>
           <button class="btn btn-warning me-4" style="width: 110px; height: 25px; font-size: 11px;" data-bs-toggle="modal" data-bs-target="#modal">DELETE</button>
+          <button class="btn btn-primary me-4" style="width: 110px; height: 25px; font-size: 11px;" data-bs-toggle="modal" data-bs-target="#modaledit" onclick="toogleinput()">Edit</button>
         </div>
         <div class="content d-flex">
           <p class="col">Kalutara</p>
@@ -107,6 +118,7 @@
           <p class="col">D000025478</p>
           <p class="col">2023/10/12</p>
           <button class="btn btn-warning me-4" style="width: 110px; height: 25px; font-size: 11px;" data-bs-toggle="modal" data-bs-target="#modal">DELETE</button>
+          <button class="btn btn-primary me-4" style="width: 110px; height: 25px; font-size: 11px;" data-bs-toggle="modal" data-bs-target="#modaledit">Edit</button>
         </div>
         <div class="content d-flex">
           <p class="col">Kalutara</p>
@@ -114,7 +126,10 @@
           <p class="col">D000025478</p>
           <p class="col">2023/10/12</p>
           <button class="btn btn-warning me-4" style="width: 110px; height: 25px; font-size: 11px;" data-bs-toggle="modal" data-bs-target="#modal">DELETE</button>
+          <button class="btn btn-primary me-4" style="width: 110px; height: 25px; font-size: 11px;" data-bs-toggle="modal" data-bs-target="#modaledit">Edit</button>
         </div>
+         
+      
         
       </div>
       
@@ -242,7 +257,7 @@
     </div>
   </section>
 
- <form action="DeliveryData" method = "post">
+ <form action="Trackinginfo" method = "post">
   <section id="Tracking">
     <div class="container border rounded-3 border-2 my-5 text-center">
       <h5 class="display-6">Tracking Info</h5>
@@ -308,10 +323,12 @@
         <div class="modal-footer">
           <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
           <button type="button" class="btn btn-primary" onclick="success()">Yes</button>
+          
         </div>
       </div>
     </div>
   </div>
+  
   
   <div class="modal fade" id="modal1" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
     <div class="modal-dialog">
@@ -440,6 +457,19 @@ function trackingchecking3()
     }
 }
 
+
+function toogleinput()
+{
+
+	event.preventDefault();
+	var input = document.getElementById("toggle");
+	var btn = document.getElementById("button");
+	
+	input.classList.remove("d-none");
+	btn.classList.remove("d-none");
+
+	
+}
 
     </script>
 </body>

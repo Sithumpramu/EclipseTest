@@ -8,17 +8,16 @@
     <servlet-name>login</servlet-name>
     <url-pattern>/login</url-pattern>
   </servlet-mapping>
-  
   <servlet>
-    <servlet-name>DeliveryData</servlet-name>
-    <servlet-class>manager.DeliveryDataservlet</servlet-class>
+    <description></description>
+    <display-name>Trackinginfo</display-name>
+    <servlet-name>Trackinginfo</servlet-name>
+    <servlet-class>manager.TrackinginfoServlet</servlet-class>
   </servlet>
   <servlet-mapping>
-    <servlet-name>DeliveryData</servlet-name>
-    <url-pattern>/DeliveryData</url-pattern>
+    <servlet-name>Trackinginfo</servlet-name>
+    <url-pattern>/Trackinginfo</url-pattern>
   </servlet-mapping>
-  
-  
   <servlet>
     <description></description>
     <display-name>orderdetailsServlet</display-name>
@@ -29,19 +28,6 @@
     <servlet-name>orderdetailsServlet</servlet-name>
     <url-pattern>/orderdetailsServlet</url-pattern>
   </servlet-mapping>
-  
-  <servlet>
-    <description></description>
-    <display-name>AsignDriver</display-name>
-    <servlet-name>AsignDriver</servlet-name>
-    <servlet-class>manager.AsignDriver</servlet-class>
-  </servlet>
-  <servlet-mapping>
-    <servlet-name>AsignDriver</servlet-name>
-    <url-pattern>/AsignDriver</url-pattern>
-  </servlet-mapping>
-  
-
   <servlet>
     <description></description>
     <display-name>DeliverySchedule</display-name>
@@ -52,7 +38,6 @@
     <servlet-name>DeliverySchedule</servlet-name>
     <url-pattern>/DeliverySchedule</url-pattern>
   </servlet-mapping>
-  
   <servlet>
     <description></description>
     <display-name>DeleteSchedule</display-name>
@@ -63,4 +48,15 @@
     <servlet-name>DeleteSchedule</servlet-name>
     <url-pattern>/DeleteSchedule</url-pattern>
   </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>UpdateSchedule</display-name>
+    <servlet-name>UpdateSchedule</servlet-name>
+    <servlet-class>manager.UpdateScheduleServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>UpdateSchedule</servlet-name>
+    <url-pattern>/UpdateSchedule</url-pattern>
+  </servlet-mapping>
+ 
 </web-app>

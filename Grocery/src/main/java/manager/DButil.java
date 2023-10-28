@@ -1,8 +1,10 @@
 package manager;
 import java.sql.Connection;
 import java.sql.DriverManager;
+import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.Statement;
+import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
@@ -155,6 +157,37 @@ public class DButil {
     		}
             
             
+ /*----------------Update DeliverySchedule details from DB--------------------------*/            
+            public static boolean UpdateSchedule(String DNo, LocalDate Date) {
+            	boolean success = false;
+            	
+            	try {
+            		
+            		con = DBconnect.getConnection();
+    				
+    				
+    				String sql = "update deliveryschedule set DeliveryDate = ? where DeliveryNo = ?";
+    				PreparedStatement stmt = con.prepareStatement(sql);
+    				stmt.setObject(1, Date);
+    		        stmt.setObject(2, DNo);
+    				int rs = stmt.executeUpdate();
+    				
+    				
+    				if(rs>0) {
+    					success = true;
+    				}
+    				else {
+    					success = false;
+    				}
+    					
+            	}
+            	catch(Exception e){
+            		e.printStackTrace();
+            	}
+            	
+            	
+            	return success;
+            }
             
 	}
 

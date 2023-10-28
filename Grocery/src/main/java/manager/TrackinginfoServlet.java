@@ -12,7 +12,7 @@ import jakarta.servlet.http.HttpSession;
 import java.io.IOException;
 
 
-public class DeliveryDataservlet extends HttpServlet {
+public class TrackinginfoServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 
 	
@@ -31,10 +31,10 @@ public class DeliveryDataservlet extends HttpServlet {
 		System.out.println(Packageno);
 		
 		if(ss==true) {
-			RequestDispatcher dis = request.getRequestDispatcher("DeliverManagement.jsp");
+			RequestDispatcher dis = request.getRequestDispatcher("yes.jsp");
 			dis.forward(request, response);
 		}else {
-			RequestDispatcher dis2 = request.getRequestDispatcher("DeliverManagement.jsp");
+			RequestDispatcher dis2 = request.getRequestDispatcher("No.jsp");
 			dis2.forward(request, response);
 		}
 	}
