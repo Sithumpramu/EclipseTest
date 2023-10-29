@@ -2,16 +2,19 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="cache-control" content="no-store">
+    <meta http-equiv="pragma" content="no-cache">
+    <meta http-equiv="expires" content="0">
+    
     <title>Delivery Management</title>
     <link rel="stylesheet" href="Resourses/css/bootstrap.css">
     <%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
     <%@ taglib prefix="fn" uri="http://java.sun.com/jsp/jstl/functions" %>
     <%@page import = "manager.orders" %>
     
+    
 </head>
 <body>
-  
-   
     
   <body class="bg-primary bg-opacity-25">
     <nav class="navbar justify-content-center bg-secondary">
@@ -39,7 +42,9 @@
             </button>
             <ul class="dropdown-menu">
               <li><a class="dropdown-item" href="#">Profile</a></li>
+              <form action="LogOUT" method="post">
               <li><a class="dropdown-item" href="#">Logout</a></li>
+              </form>
             </ul>
           </div>
           
@@ -470,6 +475,8 @@ function toogleinput()
 
 	
 }
+
+
 
     </script>
 </body>

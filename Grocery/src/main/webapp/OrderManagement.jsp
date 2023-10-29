@@ -4,6 +4,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Order Management</title>
     <link rel="stylesheet" href="Resourses/css/bootstrap.css">
+   
+    
 </head>
 <body class="bg-primary bg-opacity-25">
   <nav class="navbar justify-content-center bg-secondary">
@@ -30,13 +32,25 @@
           </button>
           <ul class="dropdown-menu">
             <li><a class="dropdown-item" href="#">Profile</a></li>
+            <form action="LogOUT" method="post">
             <li><a class="dropdown-item" href="#">Logout</a></li>
+            </form>
           </ul>
         </div>
         
 </nav>
 
-
+  <c:forEach var = "allorders" items = "${orderss}">
+  
+  ${allorders.getOrderid()}
+  ${allorders.getCustId()}
+  ${allorders.getDate()}
+  ${allorders.getType()}
+  
+  </c:forEach>
+  
+ 
+   
 
     <div class="row m-5 h-75">
         <div class="col-8">
@@ -75,12 +89,10 @@
         <div class="col-4">
           <h1 class="h5 text-danger p-2">Cancelled Oders</h1>
             <div class="bg-primary bg-opacity-25 p-2 border border-3 border-dark p-4 my-4" style="position: relative; top: 4px; height: 65vh;" >
-                <p>Lorem, ipsum dolor <span></span><span></span></p>
-                <p>Lorem, ipsum dolor <span></span><span></span></p>
-                <p>Lorem, ipsum dolor <span></span><span></span></p>
-                <p>Lorem, ipsum dolor <span></span><span></span></p>
+                <p><span></span><span></span></p>
+               
                 <!-- orderno delivery type and Cancelled date -->
-                <div class="d-flex justify-content-center" style="position: relative; top: 210px;">
+                <div class="d-flex justify-content-center" style="position: absolute; top: 410px;">
                     <a href="Deliverymanagment.html" class="btn fw-bold">View Delivery Schedule</a>
                     <!-- view delivery schedule and delete the relevent schedule it will send a message to the driver bt the system. -->
                     <a class="btn fw-bold" data-bs-toggle="offcanvas" href="#offcanvascancel" role="button" aria-controls="offcanvas">Cancel Order Processing</a>

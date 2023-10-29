@@ -19,15 +19,15 @@
             </div>
             <h1 class="h2 col text-center text-light">Manager Dashboard</h1>
             <div class="col">
-                <div class="d-flex justify-content-end">
-                    <input type="text" class="form-control me-2 w-50" placeholder="Search...">
-                    <button class="btn btn-primary">Logout</button>
+                <div class="d-flex justify-content-end mt-4">
+                    <input type="text" class="form-control me-2 w-50 h-50" placeholder="Search...">
+                    <form action="LogOUT" method="post">
+                     <button class="btn btn-primary">Logout</button>
+                    </form>
                   </div>
             </div>
         </div>
     
-
-
 
      
       <div class="main-content" >
@@ -44,7 +44,7 @@
                           <i class="fas fa-plus"></i>Order Management
                       </a>
                   </button>
-               </form>
+              
               
                   <button class="btn btn-primary mt-1 px-3">
                       <a class="nav-link text-white" href="DeliverManagement.jsp">
@@ -117,17 +117,13 @@
                 <div class="col-8">
                     <div class=" p-2 m-5 border border-3 border-dark" style="height: 200px;">
                         <h5 class="p-2">Orders</h5>
+                         <c:forEach var = "allorders" items = "${orderss}">
                         <p class="my-2 p-2 fs-5 mx-5 fs-6">
-                            <span class="mx-5">${order.getOrderID()}</span>
-                            <span class="mx-5">2023/10/05</span>
-                            <span class="mx-5">Delivery</span>
+                            <span class="mx-5"> ${allorders.getOrderid()}</span>
+                            <span class="mx-5">${allorders.getDate()}</span>
+                            <span class="mx-5">${allorders.getType()}</span>
                         </p>
-
-                        <p class="my-2 p-2 fs-5 mx-5 fs-6">
-                            <span class="mx-5">20</span>
-                            <span class="mx-5">2023/10/05</span>
-                            <span class="mx-5">Delivery</span>
-                        </p>
+                        </c:forEach>
                         <a href="OrderManagement.jsp" class="text-black" style="position: relative; left: 35vw;">More>></a>
                     </div>
                 </div>

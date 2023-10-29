@@ -188,6 +188,39 @@ public class DButil {
             	
             	return success;
             }
+         
             
+/*----------------Update DeliverySchedule details from DB--------------------------*/                        
+            public static List <AllOrders> getallorders(){
+    			
+   			 ArrayList <AllOrders> orders = new ArrayList<>();
+   			
+   			try {
+   				
+   				con = DBconnect.getConnection();
+   				stmt = con.createStatement();
+   				
+   				String sql = "select * from orders";
+   				rs = stmt.executeQuery(sql);
+   				
+   				while(rs.next()) {
+   					int OrderId = rs.getInt(1);
+   					int CusId = rs.getInt(2);
+   					Date Date = rs.getDate(3);
+   					String type = rs.getNString(4);
+   					
+   					AllOrders o = new AllOrders(OrderId,CusId,Date,type);
+   					
+   					orders.add(o);
+   					
+   				}
+   				
+   			}
+   			catch(Exception e){
+   				e.printStackTrace();
+   			}
+   			return orders;
+   		}
+               
 	}
 

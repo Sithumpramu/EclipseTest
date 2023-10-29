@@ -6,6 +6,7 @@ import jakarta.servlet.http.HttpServlet;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 import jakarta.servlet.http.HttpSession;
+import manager.AllOrders;
 import manager.DButil;
 import manager.DeliverySchedule;
 import manager.orders;
@@ -28,11 +29,13 @@ public class loginservlet extends HttpServlet {
 			sessi.setAttribute("cusdetails", cusdetails);
 			
 			orders order = DButil.getorderschedule();
-			
 			sessi.setAttribute("order", order);
 			
 			List <DeliverySchedule> sche = DButil.getDeliverySchedule();
 			sessi.setAttribute("sche", sche);
+			
+			List <AllOrders> orders= DButil.getallorders();
+			sessi.setAttribute("orderss", orders);
 		}
 		catch(Exception e) {
 			e.printStackTrace();

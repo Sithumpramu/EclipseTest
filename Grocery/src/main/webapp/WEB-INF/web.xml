@@ -58,5 +58,24 @@
     <servlet-name>UpdateSchedule</servlet-name>
     <url-pattern>/UpdateSchedule</url-pattern>
   </servlet-mapping>
- 
+  <servlet>
+    <description></description>
+    <display-name>AllOrdersServlet</display-name>
+    <servlet-name>AllOrdersServlet</servlet-name>
+    <servlet-class>manager.AllOrdersServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>AllOrdersServlet</servlet-name>
+    <url-pattern>/AllOrdersServlet</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>LogOUT</display-name>
+    <servlet-name>LogOUT</servlet-name>
+    <servlet-class>customer.LogOUTServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>LogOUT</servlet-name>
+    <url-pattern>/LogOUT</url-pattern>
+  </servlet-mapping>
 </web-app>

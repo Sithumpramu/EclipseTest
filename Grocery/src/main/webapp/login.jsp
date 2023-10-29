@@ -6,14 +6,14 @@
     
     <link rel="stylesheet" href="Resourses/css/bootstrap.css">
 </head>
-<body>
+<body class="bg-black bg-opacity-100">
 
-<div class="container mt-5" style="position:relative; top : 20vh;">
+<div class="container mt-5 " style="position:relative; top : 20vh;">
     <div class="row justify-content-center">
         <div class="col-md-6">
-            <div class="card">
+            <div class="card" style="background: linear-gradient(to bottom, #ffff, #0096FF);">
                 <div class="card-body">
-                    <h2 class="card-title text-center">Staff Login</h2>
+                    <h2 class="card-title text-center">STAFF LOGIN</h2>
                     <form action="login" method="post">
                         <div class="form-group">
                             <label for="username">Username:</label>
