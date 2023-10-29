@@ -33,7 +33,7 @@
           <ul class="dropdown-menu">
             <li><a class="dropdown-item" href="Profile.jsp">Profile</a></li>
             <form action="LogOUT" method="post">
-            <li><a class="dropdown-item" href="#">Logout</a></li>
+            <button class="dropdown-item">Logout</button>
             </form>
           </ul>
         </div>

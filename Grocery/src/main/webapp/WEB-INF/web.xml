@@ -28,16 +28,17 @@
     <servlet-name>orderdetailsServlet</servlet-name>
     <url-pattern>/orderdetailsServlet</url-pattern>
   </servlet-mapping>
-  <servlet>
+    <servlet>
     <description></description>
-    <display-name>DeliverySchedule</display-name>
-    <servlet-name>DeliverySchedule</servlet-name>
-    <servlet-class>manager.DeliveryScheduleservlet</servlet-class>
+    <display-name>DriverdetailsServlet</display-name>
+    <servlet-name>DriverdetailsServlet</servlet-name>
+    <servlet-class>manager.DriverdetailsServlet</servlet-class>
   </servlet>
   <servlet-mapping>
-    <servlet-name>DeliverySchedule</servlet-name>
-    <url-pattern>/DeliverySchedule</url-pattern>
+    <servlet-name>DriverdetailsServlet</servlet-name>
+    <url-pattern>/DriverdetailsServlet</url-pattern>
   </servlet-mapping>
+
   <servlet>
     <description></description>
     <display-name>DeleteSchedule</display-name>

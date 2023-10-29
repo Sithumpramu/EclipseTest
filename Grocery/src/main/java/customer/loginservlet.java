@@ -9,6 +9,7 @@ import jakarta.servlet.http.HttpSession;
 import manager.AllOrders;
 import manager.DButil;
 import manager.DeliverySchedule;
+import manager.Drivers;
 import manager.orders;
 
 import java.io.IOException;
@@ -36,6 +37,10 @@ public class loginservlet extends HttpServlet {
 			
 			List <AllOrders> orders= DButil.getallorders();
 			sessi.setAttribute("orderss", orders);
+			
+			List <Drivers> driver = DButil.getDeliveryDrivers();
+			sessi.setAttribute("driver", driver);
+			
 		}
 		catch(Exception e) {
 			e.printStackTrace();

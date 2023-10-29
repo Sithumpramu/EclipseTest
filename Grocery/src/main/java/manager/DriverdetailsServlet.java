@@ -11,24 +11,17 @@ import jakarta.servlet.http.HttpSession;
 import java.io.IOException;
 import java.util.List;
 
- class orderdetailsServlet extends HttpServlet {
+public class DriverdetailsServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 
 	
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		
 		HttpSession ss = request.getSession();
 		try {
-		orders order = DButil.getorderschedule();
 		
-		ss.setAttribute("order", order);
-		
-		List <DeliverySchedule> sche = DButil.getDeliverySchedule();
-		ss.setAttribute("sche", sche);
 		
 		List <Drivers> driver = DButil.getDeliveryDrivers();
 		ss.setAttribute("driver", driver);
-		
 		
 		}
 		catch(Exception e){
@@ -38,7 +31,7 @@ import java.util.List;
 		RequestDispatcher dispatcher = request.getRequestDispatcher("DeliverManagement.jsp");
 		dispatcher.forward(request, response);
  
-		}
+		
 	}
 
-
+}

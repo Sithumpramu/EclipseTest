@@ -222,5 +222,43 @@ public class DButil {
    			return orders;
    		}
                
+            
+            
+            
+    		
+/*----------------take DeliveryDrivers details from DB--------------------------*/		
+                        public static List <Drivers> getDeliveryDrivers(){
+            			
+            			 ArrayList <Drivers> driver = new ArrayList<>();
+            			
+            			try {
+            				
+            				con = DBconnect.getConnection();
+            				stmt = con.createStatement();
+            				
+            				String sql = "select * from deliveryrivers";
+            				rs = stmt.executeQuery(sql);
+            				
+            				while(rs.next()) {
+            					String DriverId = rs.getNString(1);
+            					String Name = rs.getNString(2);
+            					String Outlet = rs.getNString(3);
+            					String Hometown = rs.getNString(4);
+            					
+            					Drivers d = new Drivers(DriverId, Name, Outlet, Hometown);
+            					
+            					driver.add(d);
+     
+            					
+            				}
+            				
+            			}
+            			catch(Exception e){
+            				e.printStackTrace();
+            			}
+            			return driver;
+            		}
+                      
+                  
 	}
 

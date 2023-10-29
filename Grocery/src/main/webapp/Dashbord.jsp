@@ -12,6 +12,13 @@
 </head>
 <body>
 
+  <c:forEach var = "drivers" items = "${driver}">
+  
+  <h1>${drivers.getDriverId()}</h1>
+   ${drivers.getName()}
+  
+  </c:forEach>
+
     <div class="container-fluid">
         <div class="row bg-secondary py-3 align-items-center">
             <div class="col">
