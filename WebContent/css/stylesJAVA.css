@@ -1,0 +1,320 @@
+body
+{
+    background-color: #D0D3D4 ;
+    /*background-image: linear-gradient(rgb(119, 163, 110), rgb(255, 255, 255));*/
+}
+
+/* login & sign in pages*/
+
+input[type=text], [type=email], [type=password], [type=date], [type=time], [type=number]
+{
+    padding: 8px 40px;
+    margin: 5px 0;
+    display:inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    background-color: white;
+}
+
+/*input[type=number]
+{
+    padding: 8px 8px;
+    margin: 5px 0;
+    display:inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    background-color: white;
+    width: 22.5%;
+}*/
+
+
+
+/*textarea
+{
+    height: 150px;
+    padding: 12px 40px;
+    box-sizing: border-box;
+    border: 2px solid #ccc;
+    border-radius: 4px;
+    background-color: #f8f8f8;
+    resize: none;
+}*/
+
+input[type=submit]
+{
+    
+    background-color:#117864;
+    color: white;
+    padding: 10px 15px;
+    margin: 5px 0;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+input[type=reset]
+{
+   
+    background-color: #B03A2E;
+    color: white;
+    padding: 10px 15px;
+    margin: 5px 0;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+
+
+
+hr
+{
+    width:250px;
+    border: 1px solid black;
+}
+
+
+/*login and signin page form structure*/
+.card
+{
+    box-shadow:8px 4px 30px 20px rgba(0,0,0,0.2);
+    text-align:center;
+    padding: 10px;
+    margin: auto;
+    margin-top: 10%;
+    width:30%;
+    background-color: rgb(143, 218, 153);
+    border-radius: 7px;
+    font-size: medium;
+}  
+
+/*Home page*/
+/*.header 
+{1
+    padding-bottom: 450px;
+    padding-top: 10px;
+    background-image: url("../Images/bus.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    position: relative;
+    background-size: 100%;
+}
+
+.column1
+{
+    float: left;
+    width: 50%;
+    background-color: #000000;
+    color: rgb(185, 58, 58);
+    text-align:center;
+}
+
+.column2
+{
+    float: left;
+    width: 33.33%;
+    
+    color: rgb(255, 255, 255);
+    text-align:center;
+}
+
+.row:after 
+{
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.image
+{
+    width:100%;
+    text-align: center;
+}
+
+.para
+{
+    color: #ffffff;
+    font-size: 15px;
+}
+
+.hcard1
+{
+    /*box-shadow:8px 4px 30px 20px rgba(0,0,0,0.2);*/
+/*    text-align:center;
+    padding:1vw ;
+    margin: auto;
+    margin-top: 10%;
+    width:80%;
+    background-image: url("../Images/book.png");
+    background-size: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    border-radius: 7px;
+
+}  
+
+/*.hcard2
+{
+    /*box-shadow:8px 4px 30px 20px rgba(0,0,0,0.2);*/
+ /*   text-align:center;
+    padding: 1vw;
+    margin: auto;
+    margin-top: 10%;
+    width:80%;
+    background-image: url("../Images/bus3.jpg");
+    background-size: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    border-radius: 7px;
+
+} 
+
+/*.hcard3
+{
+    /*box-shadow:8px 4px 30px 20px rgba(0,0,0,0.2);*/
+  /*  text-align:center;
+    padding: 1vw;
+    margin: auto;
+    margin-top: 10%;
+    width:80%;
+    background-image: url("../Images/f.jpg");
+    background-size: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    border-radius: 7px;
+
+} */
+
+h3
+{
+    color: rgb(150, 180, 176);
+    text-shadow: 2px 2px 4px #000000;
+    text-align: left;
+    font-size: 30px;
+    padding-top: 10px;
+    padding-left: 10px;
+}
+
+h1{
+    font-size: 40px;
+    text-align: center;
+    color: #3c3939;
+}
+
+h2
+{
+    font-size: 30px;
+    color: #117864;
+    text-shadow:2px 2px 2px hsl(140, 3%, 17%);
+}
+
+p{
+    text-align: center;
+    color: #3c3939;
+    font-size: 15px;
+}
+
+.center
+{
+    padding: 100px 0;
+  text-align: center;
+}
+
+
+
+ul.col
+{
+    list-style-type:none;
+    margin:0;
+    padding:5px;
+    padding-right: 150px;
+    padding-left: 150px;
+    overflow:hidden;
+    text-align:right; 
+    background-color: hwb(140 11% 87% / 0.644);
+    
+}
+
+/*Nav bar*/
+
+/*button
+{
+    background-color: #2ead32;
+    border: 2px solid #1d3a1e;
+    color: white;
+    padding: 15px 30px;
+    margin-top: 35%;
+    text-align: center;
+    text-decoration: none;
+    display: block;
+    font-size: 16px;
+    border-radius: 10px;   
+    cursor: pointer;
+}
+
+
+li.button
+{
+    float:right;
+}
+
+ul.menu
+{
+    list-style-type:none;
+    margin:0;
+    padding:10px;
+    padding-right: 150px;
+    padding-left: 150px;
+    overflow:hidden;
+    background-color:black;
+    text-align:right;
+}
+
+li.menu
+{
+    float: left;
+}
+
+
+li a 
+{
+    color:white;
+    font-size: 18px;
+    display: block;
+    padding: 15px 20px;
+    text-align:center;
+    text-decoration:none;
+}
+
+li a:hover
+{
+    background-color:rgb(63, 126, 63);
+    border-radius: 25px;
+}
+
+
+
+.search
+{
+    background-color: white;
+    padding: 10px 15px;
+    border-radius: 5px;
+    margin-top:5px;
+
+}*/
+
+.Login_form #Username_error,.Login_form #password_error{
+    margin-top: 5px;
+    width: 345px;
+    font-size: 18px;
+    color: #C62828;
+    background: rgba(255,0,0,0.1);
+    text-align: center;
+    padding: 5px 8px;
+    border-radius: 3px;
+    border: 1px solid #EF9A9A;
+    display: none;
+}
+
