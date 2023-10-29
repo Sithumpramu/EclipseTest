@@ -1,0 +1,155 @@
+html
+{
+    font-size:62.5%;
+    overflow-x:hidden;
+    scroll-behavior:smooth;
+    scroll-padding-top: 7rem;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.heading
+{
+    text-align: center;
+    padding: 2rem 0;
+    padding-bottom: 3rem;
+    font-size: 3.5rem;
+    color:black;
+    margin-top: 15rem;
+}
+
+.btn
+{
+    border: 0.2rem solid black;
+    margin-top: 1rem;
+    display: inline-block;
+    padding: 1rem 1rem;
+    font-size: 1.3rem;
+    border-radius: 0.5rem;
+    color: black;
+    cursor: pointer;
+    background: white;
+    text-decoration: none;
+}
+
+button{
+	border: 0.2rem solid black;
+    margin-top: 1rem;
+    display: inline-block;
+    padding: 1rem 1rem;
+    font-size: 1.3rem;
+    border-radius: 0.5rem;
+    color: black;
+    cursor: pointer;
+    background: white;
+    text-decoration: none;
+    font-family: 'Lucida Sans';
+}
+
+button:hover{
+	background: rgb(105, 178, 99);
+    color: whitesmoke;
+}
+
+button.fa fa-shopping-cart{
+	border: 0.2rem solid black;
+    margin-top: 1rem;
+    display: inline-block;
+    padding: 1rem 1rem;
+   
+    border-radius: 0.5rem;
+    color: black;
+    cursor: pointer;
+    font-family: 'Lucida Sans';
+  
+}
+
+.btn:hover
+{
+    background: rgb(105, 178, 99);
+    color: whitesmoke;
+}
+
+.category .box-container
+{
+    border:0px solid;
+    display:grid;
+    grid-template-columns: repeat(auto-fit, minmax(24rem, 1fr));
+    gap:1.5rem;
+    margin-left: 10rem;
+    margin-right: 10rem;
+}
+
+.category .box-container .box
+{
+    border: 1px solid black;
+    border-radius: .5rem;
+    padding:3rem 3rem 3rem 3rem;
+    background: #fff;
+    outline-offset: -1rem;
+    outline: gray;
+    text-align: center;
+    box-shadow: gray;
+    width:18rem;
+    font-family: 'Lucida Sans';
+}
+
+
+
+.category .box-container .box:hover
+{
+    box-shadow:1px 1px 10px 4px rgb(105, 178, 99);
+    
+}
+
+.category .box-container .box img
+{
+
+   height:14rem; 
+   
+}
+
+.category .box-container .box h1
+{
+    font-size: 2.5rem;
+    color:rgb(105, 178, 99);
+    
+}
+
+.category .box-container .box h3
+{
+    font-size: 1.5rem;
+    color:rgb(18, 19, 20);
+}
+
+.category .box-container .box .price
+{
+    font-size: 1.5rem;
+    color: rgb(105, 178, 99);   
+}
+
+.category .box-container .box .icons div
+{  
+    color:rgb(55, 53, 53);
+    font-size:1.8rem;
+    padding-right: 1.5rem;
+    cursor: pointer;
+}
+
+form{
+	display: flex;
+}
+
+
+
+
+
+@media (max-width:450px)
+{
+    html
+    {font-size: 50%;}
+
+    .heading
+    {
+        font-size: 2.5rem;
+    }
+}

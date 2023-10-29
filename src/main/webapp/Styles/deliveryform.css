@@ -1,0 +1,89 @@
+body
+{
+    background-color: #ffffff ;
+    /*background-image: linear-gradient(rgb(119, 163, 110), rgb(255, 255, 255));*/
+}
+
+
+input[type=text], [type=email], [type=password], [type=date], [type=time], [type=number]
+{
+    padding: 8px 40px;
+    margin: 5px 0;
+    display:inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    background-color: white;
+}
+
+
+
+
+
+input[type=submit]
+{
+    
+    background-color:#4c9b42;
+    color: white;
+    padding: 10px 15px;
+    margin: 5px 0;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+input[type=reset]
+{
+   
+    background-color: #B03A2E;
+    color: white;
+    padding: 10px 15px;
+    margin: 5px 0;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+
+
+
+hr
+{
+    width:250px;
+    border: 1px solid black;
+}
+
+
+
+.card
+{
+    
+    text-align:center;
+    padding: 10px;
+    margin: auto;
+
+
+    background-color: rgb(255, 255, 255);
+    border-radius: 7px;
+    font-size: medium;
+}  
+
+
+
+
+h3
+{
+    color: rgb(150, 180, 176);
+    text-shadow: 2px 2px 4px #000000;
+    text-align: left;
+    font-size: 30px;
+    padding-top: 10px;
+    padding-left: 10px;
+}
+
+h1{
+    font-size: 40px;
+    text-align: center;
+    color: #3c3939;
+}
+

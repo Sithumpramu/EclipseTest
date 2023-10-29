@@ -1,0 +1,126 @@
+
+
+.home
+{
+    display: flex;
+    justify-content: center;
+    border: 0px solid;
+    background: url(../Images/banner.jpg) no-repeat;
+    background-position: center;
+    background-size: cover;
+    padding-top: 17rem;
+    padding-bottom: 17rem;
+}
+
+.home .content
+{
+    text-align: center;
+    border:0px solid;
+    width: 60rem;
+
+}
+
+.home .content h3
+{
+    color: rgb(13, 14, 14);
+    font-size: 3rem;
+
+}
+
+.home .content p
+{
+    color: black;
+    font-size: 1.7rem;
+    padding: 1rem 0;
+    line-height: 1.8;
+
+}
+
+.btn
+{
+    border: 0.2rem solid rgb(27, 167, 78);
+
+    display: inline-block;
+    padding: 0.5rem 0.5rem;
+    font-size: 1.3rem;
+    border-radius: 0.5rem;
+    color: rgb(255, 255, 255);
+    cursor: pointer;
+    background: rgb(27, 167, 78);
+    text-decoration: none;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.btn:hover
+{
+    background: rgb(108, 205, 142);
+    color: rgb(1, 1, 1);
+}
+
+.products .box-container1
+{
+    border:0px solid;
+    display:grid;
+    grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
+    gap:1.5rem;
+    margin-left: 10rem;
+    margin-right: 10rem;
+}
+
+.products .box-container1 .box
+{
+    border: 1px solid black;
+    border-radius: .5rem;
+    padding:2rem 2rem 2rem 2rem;
+    background: #ffffff;
+    outline-offset: -1rem;
+    outline: gray;
+    text-align: center;
+    box-shadow: gray;
+    width:15rem;
+    height:20rem;
+}
+
+.products .box-container1 .box:hover
+{
+    box-shadow:1px 1px 10px 4px rgb(135, 193, 222);
+    
+}
+
+.products .box-container1 .box img
+{
+
+   height:12rem; 
+   
+}
+
+.products .box-container1 .box h1
+{
+    font-size: 2.5rem;
+    color:rgb(120, 161, 192);
+    
+}
+
+.products .box-container1 .box h3
+{
+    font-size: 1.5rem;
+    color:rgb(18, 19, 20);
+}
+
+.products .box-container1 .box .price
+{
+    font-size: 1.5rem;
+    color: rgb(54, 148, 230);
+    padding: .5rem 0;
+    
+}
+
+.heading
+{
+    text-align: center;
+    padding: 2rem 0;
+    padding-bottom: 3rem;
+    font-size: 3.5rem;
+    color:black;
+
+}

@@ -1,0 +1,128 @@
+html
+{
+    font-size:62.5%;
+    overflow-x:hidden;
+    scroll-behavior:smooth;
+    scroll-padding-top: 7rem;
+    font-family: 'Poppins';
+}
+
+body
+{
+    background: #ffffff;
+}
+
+.header
+{
+    border: 2px solid;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right:0;
+    z-index:1000;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 2rem 9%;
+    background: #000000;
+    box-shadow: rgb(64, 64, 64);
+}
+
+.header .logo
+{
+    
+
+    display:block;
+    width: 200px;   
+    margin-top: 5px;
+
+}
+
+.header .navbar a
+{
+    font-size:1.7rem;
+    margin:0 1rem;
+    color:rgb(234, 237, 239);
+    text-decoration: none;
+    padding: 1rem 1.5rem 1rem 1.5rem;
+    border-radius: 3rem;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.header .navbar a:hover
+{
+    color: rgb(36, 42, 36);
+    background: rgb(105, 178, 99);
+
+    
+}
+
+.header .icons div
+{
+    border:1px solid;
+    height:4.5rem;
+    width: 4.5rem;
+    line-height:4.5rem;
+    border-radius:0.5rem;
+    background: #eee;
+    color:black;
+    font-size:2rem;
+    margin-right: 0.3rem;
+    text-align: center;
+    cursor: pointer;
+}
+
+.header .icons div:hover
+{
+    background: rgb(105, 178, 99);
+    color:white;
+
+}
+
+.header .search-form
+{
+    border: 0px solid;
+    position: absolute;
+    top:110%;
+    right:-110%;
+    width:50rem;
+    height:4.5rem;
+    background: #fff;
+    border-radius: 0.5rem;
+    overflow: hidden;
+    display:flex;
+    align-items: center;
+    box-shadow: rgb(105, 178, 99);
+}
+
+.header .search-form.active
+{
+    right:2rem;
+    transition: .4s linear;
+}
+
+.header .search-form input
+{
+    height:100%;
+    width:100%;
+    background: none;
+    text-transform: none;
+    font-size: 1.6rem;
+    color: black;
+    padding:0 1.5rem;
+
+}
+
+.header .search-form label
+{
+    font-size: 2.2rem;
+    padding-right: 1.5rem;
+    color: black;
+    cursor: pointer;
+
+}
+
+.header .search-form label:hover
+{
+    color: #7bc9e4;
+}
