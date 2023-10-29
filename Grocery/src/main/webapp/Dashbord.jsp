@@ -59,7 +59,7 @@
                   </button>
               
                   <button class="btn btn-primary my-1 px-3">
-                      <a class="nav-link text-white" href="#">
+                      <a class="nav-link text-white" href="Profile.jsp">
                           <i class="fas fa-tachometer-alt"></i>Profile
                       </a>
                   </button>

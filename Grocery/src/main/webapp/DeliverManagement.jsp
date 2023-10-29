@@ -41,7 +41,7 @@
               <img src="Resourses/user-solid.svg" alt="Profile" class="img-fluid" style="height: 30px; position: absolute;">
             </button>
             <ul class="dropdown-menu">
-              <li><a class="dropdown-item" href="#">Profile</a></li>
+              <li><a class="dropdown-item" href="Profile.jsp">Profile</a></li>
               <form action="LogOUT" method="post">
               <li><a class="dropdown-item" href="#">Logout</a></li>
               </form>
