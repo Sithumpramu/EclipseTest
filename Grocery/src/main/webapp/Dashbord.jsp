@@ -46,12 +46,7 @@
               
               <div class="nav flex-column">
               
-                  <button class="btn btn-primary mt-4 px-3">
-                      <a class="nav-link text-white" href="OrderManagement.jsp">
-                          <i class="fas fa-plus"></i>Order Management
-                      </a>
-                  </button>
-              
+                  
               
                   <button class="btn btn-primary mt-1 px-3">
                       <a class="nav-link text-white" href="DeliverManagement.jsp">
@@ -125,11 +120,24 @@
                     <div class=" p-2 m-5 border border-3 border-dark" style="height: 200px;">
                         <h5 class="p-2">Orders</h5>
                          <c:forEach var = "allorders" items = "${orderss}">
+                         
+                          <c:set var = "id" value = "${allorders.getOrderid()}"/>
+                           <c:set var = "date" value = "${allorders.getDate()}"/>
+                            <c:set var = "type" value = "${allorders.getType()}"/>
+                         
                         <p class="my-2 p-2 fs-5 mx-5 fs-6">
                             <span class="mx-5"> ${allorders.getOrderid()}</span>
                             <span class="mx-5">${allorders.getDate()}</span>
                             <span class="mx-5">${allorders.getType()}</span>
                         </p>
+                        
+                        
+                        <c:url value="OrderManagement.jsp" var="order">
+		<c:param name="id" value="${id}"/>
+		<c:param name="date" value="${date}"/>
+		<c:param name="type" value="${type}"/>
+		
+	</c:url>
                         </c:forEach>
                         <a href="OrderManagement.jsp" class="text-black" style="position: relative; left: 35vw;">More>></a>
                     </div>
@@ -146,7 +154,19 @@
         </div>
     
       </div>  
-
+      
+      
+      
+	
+	
+	
+	<button class="btn btn-primary mt-4 px-3">
+                      <a class="nav-link text-white" href="${order}">
+                          <i class="fas fa-plus"></i>Order Management
+                      </a>
+                  </button>
+              
+	
       <!-- modal -->
       <div class="modal fade" id="modal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
         <div class="modal-dialog modal-lg">

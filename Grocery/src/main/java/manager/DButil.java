@@ -190,7 +190,7 @@ public class DButil {
             }
          
             
-/*----------------Update DeliverySchedule details from DB--------------------------*/                        
+/*----------------get DeliverySchedule details from DB--------------------------*/                        
             public static List <AllOrders> getallorders(){
     			
    			 ArrayList <AllOrders> orders = new ArrayList<>();

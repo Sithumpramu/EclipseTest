@@ -23,6 +23,8 @@ public class DriverdetailsServlet extends HttpServlet {
 		List <Drivers> driver = DButil.getDeliveryDrivers();
 		ss.setAttribute("driver", driver);
 		
+		
+		
 		}
 		catch(Exception e){
 			e.getStackTrace();

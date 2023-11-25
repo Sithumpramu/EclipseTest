@@ -15,12 +15,12 @@ public class AllOrdersServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		HttpSession ss = request.getSession();
+		HttpSession sessi = request.getSession();
 		try {
 	
 		
 		List <AllOrders> orders= DButil.getallorders();
-		ss.setAttribute("orderss", orders);
+		sessi.setAttribute("orderss", orders);
 		
 		}
 		catch(Exception e){

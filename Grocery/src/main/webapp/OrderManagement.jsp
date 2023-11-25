@@ -1,9 +1,12 @@
+<%@page import = "customer.Customer" %>
+<%@page import = "manager.AllOrders" %>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Order Management</title>
     <link rel="stylesheet" href="Resourses/css/bootstrap.css">
+    
    
     
 </head>
@@ -50,7 +53,12 @@
   </c:forEach>
   
  
-   
+   <%
+   String id = request.getParameter("id");
+   String date = request.getParameter("date");
+   String type = request.getParameter("type");
+   %>
+
 
     <div class="row m-5 h-75">
         <div class="col-8">
@@ -59,23 +67,19 @@
                 
                     <div class="d-flex">
                         <input type="checkbox">
-                        <p class="m-3">Lorem ipsum dolor sit amet, 
-                        <span>consectetur adipisicing elit.</span>
-                        <span></span></p>
+                        <p class="d-flex justify-content-around">${order.getOrderID()}<span>${order.getDeliveryAddress()}</span></p>
+                        <p>${allorders.getOrderid()}</p>
+                        
                         <!-- Order no,date,pickup or delivey -->
                     </div>
-                    <div class="d-flex">
-                        <input type="checkbox">
-                        <p class="m-3">Lorem ipsum dolor sit amet, 
-                        <span>consectetur adipisicing elit.</span>
-                        <span></span></p>
-                    </div>
-                    <div class="d-flex">
-                        <input type="checkbox">
-                        <p class="m-3">Lorem ipsum dolor sit amet, 
-                        <span>consectetur adipisicing elit.</span>
-                        <span></span></p>
-                    </div>
+                    
+                    
+                    
+                 <%=id %>  
+                 <%=date %>  
+                 <%=type%>  
+                
+                    
                     
                 <div class="my-5 d-flex justify-content-around" style="position: relative; top: 170px;">
                     <a class="btn btn-light" data-bs-toggle="offcanvas" href="#offcanvasinform" role="button" aria-controls="offcanvas">Remind Outlet</a>
@@ -102,6 +106,10 @@
             </div>
         </div>
     </div>
+    
+    
+    
+    
 
     <!-- offcanvas -->
     <div class="offcanvas offcanvas-end bg-secondary" tabindex="-1" id="offcanvasinform" aria-labelledby="offcanvas">

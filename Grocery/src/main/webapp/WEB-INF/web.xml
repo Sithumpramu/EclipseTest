@@ -79,4 +79,6 @@
     <servlet-name>LogOUT</servlet-name>
     <url-pattern>/LogOUT</url-pattern>
   </servlet-mapping>
-</web-app>
+  
+  
+ </web-app>

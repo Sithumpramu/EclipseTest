@@ -10,6 +10,7 @@ import jakarta.servlet.http.HttpServletResponse;
 import jakarta.servlet.http.HttpSession;
 
 import java.io.IOException;
+import java.util.List;
 
 
 public class TrackinginfoServlet extends HttpServlet {
@@ -23,12 +24,16 @@ public class TrackinginfoServlet extends HttpServlet {
 		String Trackingno = request.getParameter("trackingno");
 		
 		
+		
+		
 		boolean ss;
 		
 		ss = DButil.insertdeliverydata(Orderno, Packageno, Trackingno);
 		
 		System.out.println(Orderno);
 		System.out.println(Packageno);
+		
+		
 		
 		if(ss==true) {
 			RequestDispatcher dis = request.getRequestDispatcher("yes.jsp");

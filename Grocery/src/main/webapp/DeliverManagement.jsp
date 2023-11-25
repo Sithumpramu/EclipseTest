@@ -56,7 +56,14 @@
           
   </nav>
   
-
+  <c:forEach var = "allorders" items = "${orderss}">
+  
+  ${allorders.getOrderid()}
+  ${allorders.getCustId()}
+  ${allorders.getDate()}
+  ${allorders.getType()}
+  
+  </c:forEach>
 
 
   <div class="container">
@@ -78,6 +85,7 @@
           <p></p>
           <p></p>
         </div>
+        
       </div>
     
   
