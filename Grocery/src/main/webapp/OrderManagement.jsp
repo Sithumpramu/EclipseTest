@@ -45,21 +45,10 @@
         
 </nav>
 
-  <c:forEach var = "allorders" items = "${orderss}">
-  
-  ${allorders.getOrderid()}
-  ${allorders.getCustId()}
-  ${allorders.getDate()}
-  ${allorders.getType()}
-  
-  </c:forEach>
+ 
   
  
-   <%
-   String id = request.getParameter("id");
-   String date = request.getParameter("date");
-   String type = request.getParameter("type");
-   %>
+ 
 
 
     <div class="row m-5 h-75">
@@ -68,18 +57,46 @@
             <div class="bg-primary bg-opacity-50 border border-3 border-dark p-4 my-4" style="height: 65vh;">
                 
                     <div class="d-flex">
-                        <input type="checkbox">
-                        <p class="d-flex justify-content-around">${order.getOrderID()}<span>${order.getDeliveryAddress()}</span></p>
-                        <p>${allorders.getOrderid()}</p>
+                    <p class = "col">
+                     <c:forEach var = "allorders" items = "${orderss}">
+                          
+                           ${allorders.getOrderid()}
+                           <br>
+                     </c:forEach>
+                    
+                    </p>
+                    <p class = "col">
+                     <c:forEach var = "allorders" items = "${orderss}">
+                          
+                           ${allorders.getCustId()}
+                          <br>
+                     </c:forEach>
+                    
+                    </p>
+                    <p class = "col">
+                     <c:forEach var = "allorders" items = "${orderss}">
+                          
+                            ${allorders.getDate()}
+                          <br>
+                     </c:forEach>
+                    
+                    </p>
+                    <p class = "col">
+                     <c:forEach var = "allorders" items = "${orderss}">
+                          
+                             ${allorders.getType()}
+                          <br>
+                     </c:forEach>
+                    
+                    </p>
+                    
+                    
                         
-                        <!-- Order no,date,pickup or delivey -->
-                    </div>
+                     </div>
                     
                     
                     
-                 <%=id %>  
-                 <%=date %>  
-                 <%=type%>  
+   
                 
                     
                     
