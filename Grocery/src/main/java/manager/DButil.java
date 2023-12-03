@@ -236,7 +236,7 @@ public class DButil {
             				con = DBconnect.getConnection();
             				stmt = con.createStatement();
             				
-            				String sql = "select * from deliveryrivers";
+            				String sql = "select * from deliverydrivers";
             				rs = stmt.executeQuery(sql);
             				
             				while(rs.next()) {
@@ -261,4 +261,42 @@ public class DButil {
                       
                   
 	}
+
+
+
+
+
+/*----------------get test details from DB--------------------------*/                        
+public static List <tesst> gettestimage(){
+	
+	 ArrayList <tesst> images = new ArrayList<>();
+	
+	try {
+		
+		con = DBconnect.getConnection();
+		stmt = con.createStatement();
+		
+		String sql = "select * from testtable";
+		rs = stmt.executeQuery(sql);
+		
+		while(rs.next()) {
+			
+			
+			String name = rs.getNString(1);
+			String image = rs.getNString(2);
+			
+			tesst t = new tesst(name,image);
+			
+			images.add(t);
+			
+		}
+		
+	}
+	catch(Exception e){
+		e.printStackTrace();
+	}
+	return images;
+}}
+   
+
 

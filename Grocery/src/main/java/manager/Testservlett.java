@@ -11,26 +11,28 @@ import jakarta.servlet.http.HttpSession;
 import java.io.IOException;
 import java.util.List;
 
-public class AllOrdersServlet extends HttpServlet {
+
+public class Testservlett extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 
-	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		HttpSession sessi = request.getSession();
-		
-		try {
 	
+	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		HttpSession ssj = request.getSession();
+		try {
 		
-		List <AllOrders> orders= DButil.getallorders();
-		sessi.setAttribute("orderss", orders);
+		
+		List <tesst> Tests = DButil.gettestimage();
+		ssj.setAttribute("test", Tests);
+		
+		
 		}
 		catch(Exception e){
 			e.getStackTrace();
 		}
 		
-		RequestDispatcher dispatcher = request.getRequestDispatcher("OrderManagement.jsp");
+		RequestDispatcher dispatcher = request.getRequestDispatcher("Test.jsp");
 		dispatcher.forward(request, response);
-        
-		
+ 
 	}
 
 }

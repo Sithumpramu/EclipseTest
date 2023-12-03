@@ -28,7 +28,7 @@
     <servlet-name>orderdetailsServlet</servlet-name>
     <url-pattern>/orderdetailsServlet</url-pattern>
   </servlet-mapping>
-    <servlet>
+  <servlet>
     <description></description>
     <display-name>DriverdetailsServlet</display-name>
     <servlet-name>DriverdetailsServlet</servlet-name>
@@ -38,7 +38,6 @@
     <servlet-name>DriverdetailsServlet</servlet-name>
     <url-pattern>/DriverdetailsServlet</url-pattern>
   </servlet-mapping>
-
   <servlet>
     <description></description>
     <display-name>DeleteSchedule</display-name>
@@ -79,6 +78,16 @@
     <servlet-name>LogOUT</servlet-name>
     <url-pattern>/LogOUT</url-pattern>
   </servlet-mapping>
-  
-  
- </web-app>
+
+
+  <servlet>
+    <description></description>
+    <display-name>Testservlett</display-name>
+    <servlet-name>Testservlett</servlet-name>
+    <servlet-class>manager.Testservlett</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>Testservlett</servlet-name>
+    <url-pattern>/Testservlett</url-pattern>
+  </servlet-mapping>
+</web-app>

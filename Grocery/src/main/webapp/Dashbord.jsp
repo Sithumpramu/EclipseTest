@@ -18,6 +18,13 @@
    ${drivers.getName()}
   
   </c:forEach>
+ <c:forEach var = "tests" items = "${test}">
+  
+  <P>${tests.getName()}</P>
+  <p>${tests.getImage()}</p>
+  
+  </c:forEach>
+  
 
     <div class="container-fluid">
         <div class="row bg-secondary py-3 align-items-center">
@@ -157,7 +164,7 @@
 	
 	
 	
-              
+         <button class="btn"> <a href="Test.jsp">test</a></button>     
 	
       <!-- modal -->
       <div class="modal fade" id="modal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">

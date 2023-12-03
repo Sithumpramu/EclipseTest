@@ -10,7 +10,9 @@ import manager.AllOrders;
 import manager.DButil;
 import manager.DeliverySchedule;
 import manager.Drivers;
+import manager.Test;
 import manager.orders;
+import manager.tesst;
 
 import java.io.IOException;
 import java.util.List;
@@ -25,7 +27,9 @@ public class loginservlet extends HttpServlet {
 		String username = request.getParameter("username");
 		String password = request.getParameter("password");
 		
+		
 		try {
+			
 			Customer cusdetails =  CustomerDButil.Validate(username, password);
 			sessi.setAttribute("cusdetails", cusdetails);
 			
@@ -40,6 +44,10 @@ public class loginservlet extends HttpServlet {
 			
 			List <Drivers> driver = DButil.getDeliveryDrivers();
 			sessi.setAttribute("driver", driver);
+			
+			List <tesst> Tests = DButil.gettestimage();
+			sessi.setAttribute("test", Tests);
+			
 			
 		}
 		catch(Exception e) {
